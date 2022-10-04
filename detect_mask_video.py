@@ -18,7 +18,7 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 	# grab the dimensions of the frame and then construct a blob
 	# from it
 	(h, w) = frame.shape[:2]
-	blob = cv2.dnn.blobFromImage(frame, 1.0, (224, 224),
+	blob = cv2.dnn.blobFromImage(frame, 1.0, (225, 225),
 		(104.0, 177.0, 123.0))
 
 	# pass the blob through the network and obtain the face detections
@@ -108,9 +108,9 @@ while True:
 
 		# determine the class label and color we'll use to draw
 		# the bounding box and text
-		label = "No Mask"  if mask < withoutMask else "Mask"
+		label = "No Mask identified"  if mask < withoutMask else "Mask found on face"
 		color = (0, 255, 0) 	 		
-		playsound('aud1.mp3')  if label == "No Mask" else (0, 0, 255)
+		playsound('aud1.mp3')  if label == "No Mask identified" else (0, 0, 255)
 		# include the probability in the label
 		
 		
