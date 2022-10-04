@@ -23,7 +23,7 @@ import os
 # initialize the initial learning rate, number of epochs to train for,
 # and batch size
 INIT_LR = 1e-4
-EPOCHS = 20
+EPOCHS = 19
 BS = 32
 
 DIRECTORY = r"C:\Users\user\Documents\Face-Mask-Detection-master\dataset"
